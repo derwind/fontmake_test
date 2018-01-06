@@ -1,9 +1,9 @@
 SRC_UFO=font.ufo
 TARGET_OTF=master_otf/font.otf
 TARGET_TTF=master_ttf/font.ttf
-AFDKO_OTF=font.otf
-AFDKO_TTF=font.ttf
-AFDKO_TTF_HEAD_MODIFIED=font.head_mod.ttf
+AFDKO_OTF=font_fdk.otf
+AFDKO_TTF=font_fdk.ttf
+AFDKO_TTF_HEAD_MODIFIED=font_fdk.head_mod.ttf
 
 OTF2TTF=../../../fonttools/Snippets/otf2ttf.py
 

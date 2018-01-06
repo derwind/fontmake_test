@@ -1,0 +1,27 @@
+* fontmake
+[font.otf]
+  head.flags[1]: 1
+  ControlBounds: 53/53 (100.0%); maxdiff=0 (None)
+  Bounds       : 48/53 (90.57%); maxdiff=27.28 (O)
+
+[font.ttf]
+  head.flags[1]: 1
+  ControlBounds: 53/53 (100.0%); maxdiff=0 (None)
+  Bounds       : 50/53 (94.34%); maxdiff=5.6 (c)
+
+* FDK
+[font_fdk.otf]
+  head.flags[1]: 1
+  ControlBounds: 48/53 (90.57%); maxdiff=27.0 (O)
+  Bounds       : 53/53 (100.0%); maxdiff=0 (None)
+
+(TTF by otf2ttf.py)
+[font_fdk.ttf]
+  head.flags[1]: 0
+  ControlBounds: 53/53 (100.0%); maxdiff=0 (None)
+  Bounds       : 50/53 (94.34%); maxdiff=5.6 (c)
+
+[font_fdk.head_mod.ttf]
+  head.flags[1]: 1
+  ControlBounds: 53/53 (100.0%); maxdiff=0 (None)
+  Bounds       : 50/53 (94.34%); maxdiff=5.6 (c)
