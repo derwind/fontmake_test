@@ -1,15 +1,29 @@
 SRC_UFO=font.ufo
 TARGET_OTF=master_otf/font.otf
 TARGET_TTF=master_ttf/font.ttf
+AFDKO_OTF=font.otf
+AFDKO_TTF=font.ttf
+AFDKO_TTF_HEAD_MODIFIED=font.head_mod.ttf
 
-all: $(TARGET_OTF) $(TARGET_TTF)
+OTF2TTF=../../../fonttools/Snippets/otf2ttf.py
+
+all: $(TARGET_OTF) $(TARGET_TTF) $(AFDKO_OTF) $(AFDKO_TTF) $(AFDKO_TTF_HEAD_MODIFIED)
 
 $(TARGET_OTF): $(SRC_UFO)
-	fontmake -o otf -u $<
+	fontmake -o otf -u $< --production-names
 
 $(TARGET_TTF): $(SRC_UFO)
-	fontmake -o ttf -u $<
+	fontmake -o ttf -u $< --production-names
+
+$(AFDKO_OTF): $(SRC_UFO)
+	makeotf -f $< -o $@
+
+$(AFDKO_TTF): $(AFDKO_OTF)
+	python -B $(OTF2TTF) -o $@ $<
+
+$(AFDKO_TTF_HEAD_MODIFIED): $(AFDKO_TTF)
+	python -B update_flags.py -o $@ $<
 
 .PHONY: clean
 clean:
-	rm -rf master_otf master_ttf
+	rm -rf master_otf master_ttf $(AFDKO_OTF) $(AFDKO_TTF) $(AFDKO_TTF_HEAD_MODIFIED) current.fpr
