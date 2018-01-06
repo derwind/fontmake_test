@@ -12,14 +12,30 @@
 	<integer>-250</integer>
 	<key>familyName</key>
 	<string>Source Sans Pro</string>
-	<key>italicAngle</key>
-	<integer>0</integer>
+	<key>openTypeHeadCreated</key>
+	<string>2018/01/06 18:38:30</string>
+	<key>openTypeNamePreferredFamilyName</key>
+	<string>Source Sans Pro</string>
+	<key>openTypeNamePreferredSubfamilyName</key>
+	<string>Regular</string>
+	<key>openTypeOS2WeightClass</key>
+	<integer>400</integer>
+	<key>openTypeOS2WidthClass</key>
+	<integer>5</integer>
+	<key>postscriptBlueValues</key>
+	<array>
+	</array>
 	<key>postscriptFontName</key>
 	<string>SourceSansPro-Regular</string>
+	<key>postscriptOtherBlues</key>
+	<array>
+	</array>
 	<key>postscriptUnderlinePosition</key>
 	<integer>-100</integer>
 	<key>postscriptUnderlineThickness</key>
 	<integer>50</integer>
+	<key>styleMapStyleName</key>
+	<string>regular</string>
 	<key>styleName</key>
 	<string>Regular</string>
 	<key>trademark</key>
