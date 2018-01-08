@@ -10,10 +10,10 @@ OTF2TTF=../../../fonttools/Snippets/otf2ttf.py
 all: $(TARGET_OTF) $(TARGET_TTF) $(AFDKO_OTF) $(AFDKO_TTF) $(AFDKO_TTF_HEAD_MODIFIED)
 
 $(TARGET_OTF): $(SRC_UFO)
-	fontmake -o otf -u $< --production-names
+	fontmake -o otf -u $< --production-names --keep-overlaps
 
 $(TARGET_TTF): $(SRC_UFO)
-	fontmake -o ttf -u $< --production-names
+	fontmake -o ttf -u $< --production-names --keep-overlaps
 
 $(AFDKO_OTF): $(SRC_UFO)
 	makeotf -f $< -o $@
