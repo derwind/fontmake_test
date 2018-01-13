@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>test for local fonts</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+	<style type="text/css">
+
+	@font-face {
+		font-family: "font_fdk";
+		src: url(font_fdk.otf);
+	}
+	@font-face {
+		font-family: "font_fdk_ttf";
+		src: url(font_fdk.ttf);
+	}
+	@font-face {
+		font-family: "font_fdk_ttf.hmtx_mod";
+		src: url(font_fdk.hmtx_mod.ttf);
+	}
+
+	.my_font {
+		font-size: 500px;
+		opacity: 0.2;
+	}
+	.my_font.otf {
+		font-family: "font_fdk";
+		color: red;
+	}
+	.my_font.ttf {
+		font-family: "font_fdk_ttf";
+		color: blue;
+	}
+	.my_font.ttf_hmtx_mod {
+		font-family: "font_fdk_ttf.hmtx_mod";
+		color: blue;
+	}
+	</style>
+</head> 
+<body>
+	<!-- positions of 'a' and 'c' slightly differ -->
+	<div class="my_font otf" style="position: absolute; left: 0px; top: 0px;">
+		<span>ABOoabcde</span>
+	</div>
+	<div class="my_font ttf" style="position: absolute; left: 0px; top: 0px;">
+		<span>ABOoabcde</span>
+	</div>
+	<!-- positions of 'a' and 'c' coincide -->
+	<div class="my_font otf" style="position: absolute; left: 0px; top: 500px;">
+		<span>ABOoabcde</span>
+	</div>
+	<div class="my_font ttf_hmtx_mod" style="position: absolute; left: 0px; top: 500px;">
+		<span>ABOoabcde</span>
+	</div>
+</body>
+</html>
