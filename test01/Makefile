@@ -14,12 +14,15 @@ $(TARGET_OTF): $(SRC_UFO)
 
 $(TARGET_TTF): $(SRC_UFO)
 	fontmake -o ttf -u $< --production-names --keep-overlaps
+	python -B rename_family.py -f "Source Sans Pro TT" $@
 
 $(AFDKO_OTF): $(SRC_UFO)
 	makeotf -f $< -o $@
+	python -B rename_family.py -f "Source Sans Pro FDK" $@
 
 $(AFDKO_TTF): $(AFDKO_OTF)
 	python -B $(OTF2TTF) -o $@ $<
+	python -B rename_family.py -f "Source Sans Pro FDK TT" $@
 
 $(AFDKO_TTF_HEAD_MODIFIED): $(AFDKO_TTF)
 	python -B update_flags.py -o $@ $<
