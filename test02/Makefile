@@ -32,6 +32,7 @@ $(AFDKO_OTF): $(SRC_CID)
 $(AFDKO_TTF): $(AFDKO_OTF)
 	python -B $(OTF2TTF) -o $@ $<
 	python -B rename_family.py -f "Source Han Sans FDK TT" $@
+	python -B remove_needless_ttf_tables.py $@
 
 $(AFDKO_TTF_HMTX_MODIFIED): $(AFDKO_TTF)
 	python -B update_ttf_hmtx.py -o $@ --vmtx $<
