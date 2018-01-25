@@ -5,7 +5,7 @@ import os, sys, re
 import argparse
 from robofab.world import OpenFont
 
-class FlagsUpdater(object):
+class PostscriptNameProvider(object):
     def __init__(self, in_font, out_font):
         self.in_font = in_font
         self.out_font = out_font
@@ -36,7 +36,7 @@ def get_args():
 
 def main():
      args = get_args()
-     tool = FlagsUpdater(args.in_font, args.out_font)
+     tool = PostscriptNameProvider(args.in_font, args.out_font)
      sys.exit(tool.run())
 
 if __name__ == "__main__":
